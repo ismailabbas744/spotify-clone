@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+
+}
+.border{
+    border: 2px solid red;
+}
+.invert{
+    filter: invert(1);
+}
+.invert-1{
+    filter: invert(58%);
+}
+
+.btn{
+    height: 50px;
+    width: 114px;
+    border-radius: 40px;
+}

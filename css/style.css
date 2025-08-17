@@ -1,0 +1,447 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --a:0;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body{
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+header{
+    box-sizing: border-box;
+    width:100vw;
+    padding: 6px 4px 4px 24px ;
+    /* gap: 4px; */
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left{
+    gap: 14px;  
+}
+
+.logo img{
+    width: 40px;
+}
+
+.home-logo{
+    width: 40px;
+    background-color: #1f1f1f;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home-logo img{
+    width: 25px;
+}
+
+.search{
+    width: 300px;
+    background-color: #1f1f1f;
+    padding: 8px 16px;
+    border-radius: 25px;
+    gap: 8px;
+}
+
+.search img{
+    width: 25px;
+}
+
+.search input{
+    border: none;
+    background-color: #1f1f1f;
+    height: 100%;
+    color: #a0b3b3;
+    
+}
+
+.header-right ul{
+    list-style: none;
+    gap: 16px;
+    color: #a2a2a2;
+    align-items: center;
+    
+}
+.header-right .customer-support{
+    gap: 16px;
+    border-right: 1.5px solid #a0b3b3;
+    padding: 0 16px;
+    
+}
+.customer-support li{
+    font-weight: 600;
+
+}
+.header-right .basics{
+    align-items: center;
+    gap: 25px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.header-right button{
+    font-weight: 700;
+    
+}
+.download{
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+.basics li{
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+main{
+    width: 100vw;
+    position: relative;
+    padding: 4px
+}
+.left{
+    position: relative;
+    background-color: #121212;
+    width: 25vw;
+    margin: 0 8px;
+    min-height: 85vh;
+    border-radius: 8px;
+    
+}
+.right{
+    background-color: #202020;
+    width: 72vw;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.library{
+    padding: 16px 6px 16px 16px;
+    margin-top: 40px;
+     
+}
+.library .lib-heading{
+    gap: 166px;
+    margin-bottom: 8px; 
+}
+.library h2{
+    font-weight: 700;
+    
+}
+
+.songs{
+    height: 50vh;
+    overflow: auto;
+    
+}
+.songsList{
+    height: 100%;
+}
+
+
+.songs .songsList li{
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 80px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.songs .songsList li .songName{
+    width: 165px;
+}
+.left-footer{
+    position: fixed;
+    bottom: 14px;
+    width: 25%;
+    background-color: #121212;
+
+}
+.left-footer ul{
+    padding: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.left-footer li{
+    list-style: none;
+}
+.left-footer li a{
+    
+    font-size: 12px;
+    color: #a2a2a2;
+    text-decoration: none;
+}
+
+.right{
+    padding: 25px 4px 0px 40px;
+    position: relative;
+}
+.right h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+.cardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 70vh;
+    overflow: auto;
+    position: relative;
+    padding-bottom: 86px;
+    box-sizing: border-box;
+    gap: 14px;
+    justify-content: center;
+    
+}
+.cardsContainer .card{
+    width: 160px;
+    border-radius: 8px;
+    padding: 8px 0px 8px 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s;
+    
+}
+.card > h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+.card > img{
+    width: 150px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.card .play-btn {
+    position: absolute;
+    bottom: 140px;
+    right: 16px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+.card:hover{
+    background-color: #595959;
+    --a:1;
+
+}
+
+.play-bar{
+    height: 60px;
+    position: absolute;
+    background-color: rgb(56, 56, 56);
+    width: 91%;
+    bottom: 0px;
+    border-radius: 14px;
+    padding: 8px 8px 0px 8px;
+}
+.songTitle{
+    white-space:nowrap;
+    width: 110px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.play-bar .song-info{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.play-bar .song-info .play-icons{
+    display: flex;
+    gap: 24px;
+    cursor: pointer;
+    margin-left: 88px
+}
+.songDuration{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+.vol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.vol input{
+    width: 80px;
+    cursor: pointer;
+}
+
+
+
+.play-bar .seekbar{
+    height: 4px;
+    width: 100%;
+    /* border: 4px soild white; */
+    background-color: aliceblue;
+    margin-top: 11px;
+    position: relative;
+    cursor: pointer;
+}
+.play-bar .circle{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    bottom: 10px;
+    left: 0%;
+    cursor: pointer;
+}
+
+.close{
+    position: absolute;
+    right: 8px;
+    display: none;
+    cursor: pointer;
+}
+.hamburger{
+    position: absolute;
+    top: 30px;
+    left: 4px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+  .hamburger{
+    display: block;
+  }
+
+  .close{
+    display: block;
+  }
+
+  .search{
+    width: 20px;
+    
+  }
+  .search input{
+    display: none;
+  }
+  .customer-support, .download{
+    display: none !important;
+  }
+
+  .right{
+    position: absolute;
+    width: 100vw;
+    height: 96vh;
+}
+
+.left{
+    position: absolute;
+    z-index: 10;
+    left: -96%;
+    height: 96vh;
+  }
+
+  .play-bar{
+    left: 12px;
+    bottom: 30px;
+    height: 20vh;
+    
+}
+.play-bar .song-info{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .play-bar .song-info .play-icons{
+    margin-left: 0;
+  }
+  .song-info .songTitle{
+    width: 250px;
+    text-align: center;
+  }
+  .songDuration{
+    flex-direction: column;
+    gap: 4px;
+  }
+  .cardsContainer{
+    max-height: 86vh;
+    justify-content: center;
+    padding-bottom: 200px;
+  }
+  .cardsContainer .card{
+    width: 200px;
+  }
+  .card > img{
+    width: 180px;
+  }
+  .card .play-btn {
+    bottom: 96px;
+    right: 25px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1700px){
+    .songs .songsList li .songName{
+        width: 270px;
+        
+    }
+    .cardsContainer .card{
+    width: 200px;
+  }
+  .card > img{
+    width: 180px;
+  }
+  .card .play-btn {
+    bottom: 114px;
+    right: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar{
+    width: 12px;
+    height: 2px;
+}
+::-webkit-scrollbar-thumb{
+   
+    background-color: hsla(0, 0%, 100%, .3);
+    height: 2px;
+    
+    
+}
+::-webkit-scrollbar-track{
+    
+    background-color: #121212;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsla(0, 0%, 100%, .5);
+
+}
