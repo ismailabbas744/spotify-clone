@@ -119,7 +119,7 @@ async function main() {
 
     play.addEventListener("click", () => {
         if (currentSong.src == "") {
-            playMusic(songs[0]);
+            // playMusic(songs[0]);
 
 
         }
