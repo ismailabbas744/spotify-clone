@@ -193,7 +193,6 @@ async function main() {
     document.querySelector(".vol>input").addEventListener("input", (e) => {
         let a = e.target.value;
         currentSong.volume = a / 100;
-        // console.log(currentSong.volume);
         document.querySelector(".vol>img").src = "images/volume.svg";
         if (currentSong.volume == 0) {
             document.querySelector(".vol>img").src = "images/mute.svg";
