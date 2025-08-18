@@ -222,7 +222,7 @@ async function main() {
 
     // Loading folders in the cardsContainer
     let displayFolders = async () => {
-        let a = await fetch(`songs/`);
+        let a = await fetch(`https://github.com/ismailabbas744/spotify-clone/tree/main/songs`);
         let b = await a.text();
         let div = document.createElement("div")
         div.innerHTML = b;
