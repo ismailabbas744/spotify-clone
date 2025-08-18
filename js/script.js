@@ -1,7 +1,7 @@
 console.log("hello the js is initialized");
 
 let currentSong = new Audio();
-let songs;
+let songs = [];
 
 
 function playMusic(track) {
@@ -110,7 +110,7 @@ async function main() {
         document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
 
         if (currentSong.currentTime == currentSong.duration) {
-            play.firstElementChild.src = "play1.svg"
+            play.firstElementChild.src = "images/play1.svg"
         }
 
     })
@@ -119,21 +119,23 @@ async function main() {
 
     play.addEventListener("click", () => {
         if (currentSong.src == "") {
-            // playMusic(songs[0]);
-
+            if(songs.length!=0){
+                playMusic(songs[0])
+            }
+            
 
         }
         else if (!currentSong.paused) {
             currentSong.pause();
-            play.firstElementChild.src = "play1.svg"
+            play.firstElementChild.src = "images/play1.svg"
         }
         else {
             currentSong.play()
-            play.firstElementChild.src = "pause.svg";
+            play.firstElementChild.src = "images/pause.svg";
         }
         if (currentSong.currentTime == currentSong.duration) {
             currentSong.currentTime = 0;
-            play.firstElementChild.src = "pause.svg";
+            play.firstElementChild.src = "images/pause.svg";
         }
     })
 
@@ -220,7 +222,7 @@ async function main() {
 
     // Loading folders in the cardsContainer
     let displayFolders = async () => {
-        let a = await fetch(`songs/`);
+        let a = await fetch(`../songs/`);
         let b = await a.text();
         let div = document.createElement("div")
         div.innerHTML = b;
