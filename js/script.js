@@ -230,14 +230,14 @@ async function main() {
 
         for (let index = 0; index < as.length; index++) {
             const element = as[index];
-            if (element.href.includes("/songs")) {
-
-                let foldersInfo = await fetch(`${element.href}info.json`);
+            if (element.href.includes("/songs/")) {
+                
+                let foldersInfo = await fetch(`${element.href}/info.json`);
                 // let foldersPic = await fetch(`${elemen t.href}cover.webp`);
                 foldersInfo = await foldersInfo.json();
 
                 document.querySelector(".cardsContainer").innerHTML += `<div data-folder="${element.href}" class="card">
-                    <img src="${element.href}cover.jpeg" alt="songs pic">
+                    <img src="${element.href}/cover.jpeg" alt="songs pic">
                     <h2>${foldersInfo.title}</h2>
                     <div>${foldersInfo.description}</div>
                     <div class="play-btn">
